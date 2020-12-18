@@ -1,0 +1,21 @@
+version: "3.3"
+
+
+services:
+
+  filia_1:
+    build: ./filia
+    ports:
+      - "3001:8000"
+
+  filia_2:
+    build: ./filia
+    ports:
+      - "3002:8000"
+
+  main_office:
+    build: ./main_office
+    ports:
+      - "8000:8000"
+    volumes:
+    - ./main_office:/code/main_office/
